@@ -1,0 +1,243 @@
+@font-face {
+  font-family: "Eurostile";
+  src: url("https://fluxusgaming.github.io/PORTFOLIO_PROYECTO_DEMO/fonts/Eurostile.ttf");
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  height: 100%;
+  max-width: 100%;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.fa-bars {
+  display: none;
+}
+.navbar > .logo {
+  margin-left: 20px;
+  font-size: 1.8rem;
+  justify-content: flex-start;
+}
+
+.navbar > ul {
+  display: flex;
+}
+.navbar > ul > li {
+  padding: 18px;
+  margin-right: 10px;
+  background: #f6f6f6;
+  list-style: none;
+  border-radius: 15px;
+}
+.navbar a {
+  color: black;
+  text-decoration: none;
+}
+.titulo_contenedor {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.titulo_contenedor > h1 {
+  font-family: "Eurostile";
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.acerca_de_mi {
+  width: 50%;
+  margin: 0 auto;
+}
+.acerca_de_mi > p {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  color: #0a0a0ae6;
+}
+.pc_vector_svg {
+  height: auto;
+  width: 30%;
+  margin: 2rem auto 0 auto;
+}
+.habilidades_titulo {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: #7510f7;
+  justify-content: center;
+}
+.habilidades_titulo > h2 {
+  font-family: "Eurostile";
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+}
+.habilidades_contenedor {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.habilidades {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 1.5rem;
+  width: 60%;
+  margin-bottom: 1.5rem;
+}
+.habilidades > i {
+  font-size: 100px;
+  height: fit-content;
+  width: fit-content;
+  text-align: center;
+  margin: 0 auto;
+}
+.habilidades > i:hover {
+  transform: scale(1.5);
+}
+.fa-html5 {
+  color: #f16524;
+}
+.fa-css3-alt {
+  color: #046dbe;
+}
+.fa-js-square {
+  color: #efd81d;
+}
+.fa-react {
+  color: #61dafb;
+}
+.fa-react {
+  transform: rotate(90deg);
+}
+.fa-react:hover {
+  transition: transform 0.5s ease;
+}
+.fa-node-js {
+  color: #91c441;
+}
+.proyectos_titulo {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: #7510f7;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.proyectos_titulo > h2 {
+  font-family: "Eurostile";
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.proyectos_contenedor {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.proyectos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 60%;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+.proyecto {
+  height: 200px;
+  width: 100%;
+  background: #7510f7;
+  border-radius: 15px;
+  text-align: center;
+}
+.proyecto:hover {
+  transform: scale3d(1.1, 1.1, 1);
+}
+.proyecto > h2 {
+  font-family: "Eurostile";
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+}
+.contacto_titulo {
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  background-color: #7510f7;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.contacto_titulo > h2 {
+  font-family: "Eurostile";
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+}
+@media only screen and (max-width: 600px) {
+  .opciones > li {
+    display: none;
+  }
+  /* .navbar {
+    width: 100%;
+    height: 100vh;
+    background: black;
+  }
+  .navbar .opciones {
+    width: 100%;
+    height: 100%;
+  }
+  .navbar > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+  .navbar > ul > li {
+    width: 60%;
+    padding: 18px;
+    margin: 10px auto;
+    background: #f6f6f6;
+    list-style: none;
+    border-radius: 15px;
+    height: fit-content;
+    text-align: center;
+  }
+  .navbar a {
+    color: black;
+    text-decoration: none;
+    height: fit-content;
+  } */
+
+  .fa-bars {
+    display: flex;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+  .proyectos {
+    grid-template-columns: 1fr;
+    width: 60%;
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
+  .habilidades {
+    grid-template-columns: 1fr 1fr;
+  }
+  .pc_vector_svg {
+    height: auto;
+    width: 80%;
+  }
+}
