@@ -10,13 +10,17 @@
 <body>
 <nav class="navbar">
     <h2 class="logo">FG</h2>
-    <ul class="opciones">
-        <li><a href="#">¿Quien soy?</a></li>
-        <li><a href="#">Tecnologías</a></li>
-        <li><a href="#">Proyectos</a></li>
-        <li><a href="#">Contacto</a></li>
-        <i class="fas fa-bars"></i>
-      </ul>
+    <div class="menu">
+        <i class="fas fa-times"></i>
+        <ul id="opciones" class="active">
+            <li id="opcion"><a href="#">¿Quien soy?</a></li>
+            <li id="opcion"><a href="#">Tecnologías</a></li>
+            <li id="opcion"><a href="#">Proyectos</a></li>
+            <li id="opcion"><a href="#">Contacto</a></li>
+        </ul>
+    <i id="toggleNav" class="fas fa-bars"></i>
+    </div>
+</div>
 </nav>
 <div class="titulo_contenedor">
 <h1>Desarrollador, Front-end y Back-end</h1>
@@ -58,3 +62,21 @@
 </footer>
 </body>
 </html>
+
+<script type="text/javascript">
+    function AlterarMenu() {
+        var element = document.getElementById("opciones");
+        var element2 = document.getElementsByClassName("navbar");
+  for (var i = 0; i < element2.length; i++) {
+ element2[i].classList.toggle("show_navbar")
+}
+  element.classList.toggle("show");
+        console.log("FUNCIONA :D")
+      }
+</script>
+
+<script type="text/javascript">
+const toggleNav = document.getElementById("toggleNav");
+const navMenu = document.getElementsById("opciones");
+toggleNav.addEventListener("click",() => {} );
+</script>

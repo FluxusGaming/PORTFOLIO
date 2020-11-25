@@ -2,6 +2,7 @@
   font-family: "Eurostile";
   src: url("https://fluxusgaming.github.io/PORTFOLIO_PROYECTO_DEMO/fonts/Eurostile.ttf");
 }
+
 html,
 body {
   margin: 0;
@@ -13,33 +14,54 @@ body {
   height: 100%;
   max-width: 100%;
 }
+.fa-bars {
+  display: none;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.fa-bars {
-  display: none;
-}
+
 .navbar > .logo {
   margin-left: 20px;
   font-size: 1.8rem;
   justify-content: flex-start;
+  height: fit-content;
+  width: fit-content;
 }
 
-.navbar > ul {
+.navbar > .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+}
+
+.navbar > .menu > #opciones {
   display: flex;
 }
-.navbar > ul > li {
+.navbar > .menu > #opciones ul {
+  display: inline-flex;
+}
+.navbar > .menu > #toggleNav {
+  display: none;
+}
+.navbar > .menu > #opciones li {
   padding: 18px;
   margin-right: 10px;
   background: #f6f6f6;
   list-style: none;
   border-radius: 15px;
+  text-align: center;
 }
 .navbar a {
   color: black;
   text-decoration: none;
+  height: 100%;
+  width: 100%;
 }
 .titulo_contenedor {
   margin-top: 20px;
@@ -211,25 +233,58 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-  .opciones > li {
-    display: none;
+  .navbar {
+    display: flex;
+    flex-direction: row;
   }
-  /* .navbar {
-    width: 100%;
+  .navbar > .menu > #toggleNav {
+    display: inline-flex;
+  }
+  .navbar > .menu > .fa-times {
+    font-size: 2.2rem;
+    color: #fff;
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  .navbar > .menu > #opciones.active {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 100vh;
-    background: black;
+    background: #7510f7;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
   }
-  .navbar .opciones {
-    width: 100%;
-    height: 100%;
+
+  .navbar > .menu > #opciones.active li {
+    height: auto;
+    width: 10rem;
+    margin: 0.5rem;
   }
-  .navbar > ul {
+
+  /* .navbar > .opciones_contenedor > #opciones {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
+    height: 100%;
     padding: 0;
   }
-  .navbar > ul > li {
+  .navbar > .opciones_contenedor {
+    width: 100%;
+    height: calc(100vh - 5rem);
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar > .opciones_contenedor > #opciones > li {
     width: 60%;
     padding: 18px;
     margin: 10px auto;
@@ -244,11 +299,14 @@ body {
     text-decoration: none;
     height: fit-content;
   } */
-
   .fa-bars {
     display: flex;
     font-size: 1.5rem;
     margin-right: 1rem;
+  }
+  .acerca_de_mi {
+    width: 90%;
+    margin: 0 auto;
   }
   .proyectos {
     grid-template-columns: 1fr;
