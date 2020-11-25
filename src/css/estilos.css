@@ -14,18 +14,20 @@ body {
   height: 100%;
   max-width: 100%;
 }
-.fa-bars {
+.navbar__burger {
   display: none;
 }
 .navbar {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 4rem;
 }
 
 .navbar__logo {
   display: flex;
   font-size: 1.8rem;
+  margin: 1rem;
   height: fit-content;
   width: fit-content;
 }
@@ -224,6 +226,39 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+  .navbar__menu {
+    display: none;
+  }
+  .navbar__burger {
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    background: none;
+    border: 0;
+    margin: auto 1rem;
+    outline: none;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    width: fit-content;
+  }
+  .navbar__burger:hover {
+    opacity: 0.6;
+  }
+  .navbar__burger .fa-bars {
+    color: black;
+    font-size: 1.5rem;
+  }
+  .hero__title {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .hero__banner {
+    height: auto;
+    width: 30%;
+    margin: 1rem auto 0 auto;
+  }
   .hero__about {
     width: 90%;
     margin: 0 auto;
@@ -232,6 +267,7 @@ body {
     grid-template-columns: 1fr;
     column-gap: 2rem;
     row-gap: 1rem;
+    width: 90%;
   }
   .skills__list {
     grid-template-columns: 1fr 1fr;
