@@ -1,82 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Portfolio</title>
-    <script src="https://kit.fontawesome.com/1bfd5e88d3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./css/estilos.css">
-</head>
-<body>
-<nav class="navbar">
-    <h2 class="logo">FG</h2>
-    <div class="menu">
-        <i class="fas fa-times"></i>
-        <ul id="opciones" class="active">
-            <li id="opcion"><a href="#">¿Quien soy?</a></li>
-            <li id="opcion"><a href="#">Tecnologías</a></li>
-            <li id="opcion"><a href="#">Proyectos</a></li>
-            <li id="opcion"><a href="#">Contacto</a></li>
+    <link rel="subresource" href="src/css/estilos.css" />
+    <link rel="stylesheet" href="src/css/estilos.css" />
+    <link rel="prefetch" href="src/js/app.js" />
+    <script
+      src="https://kit.fontawesome.com/1bfd5e88d3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="container">
+      <nav class="navbar">
+        <h2 class="navbar__logo">FG</h2>
+        <!-- <i class="fas fa-times"></i> -->
+        <ul class="navbar__menu" class="active">
+          <li class="navbar__link">
+            <a href="#">¿Quien soy?</a>
+          </li>
+          <li class="navbar__link">
+            <a href="#">Tecnologías</a>
+          </li>
+          <li class="navbar__link">
+            <a href="#">Proyectos</a>
+          </li>
+          <li class="navbar__link">
+            <a href="#">Contacto</a>
+          </li>
         </ul>
-    <i id="toggleNav" class="fas fa-bars"></i>
-    </div>
-</div>
-</nav>
-<div class="titulo_contenedor">
-<h1>Desarrollador, Front-end y Back-end</h1>
-</div>
-<img class="avatar_svg" src="img/mf-avatar.svg">
-<div class="acerca_de_mi">
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat, architecto molestias eaque aperiam quos facere? Dolorem voluptatem sunt eius illo maxime, architecto repudiandae modi voluptatibus laboriosam veritatis! Tenetur, maxime sunt?</p>
-</div>
-<img class="pc_vector_svg" src="img/pc_vector.svg">
-<div class="habilidades_titulo">
-<h2>Habilidades - Tecnologías</h2>
-</div>
-<div class="habilidades_contenedor">
-<div class="habilidades">
-<i class="fab fa-html5" aria-hidden="true"></i>
-<i class="fab fa-css3-alt" aria-hidden="true"></i>
-<i class="fab fa-js-square" aria-hidden="true"></i>
-<i class="fab fa-react" aria-hidden="true"></i>
-<i class="fab fa-github" aria-hidden="true"></i>
-<i class="fab fa-node-js" aria-hidden="true"></i>
-</div>
-</div>
-<div class="proyectos_titulo">
-    <h2>Proyectos - Trabajos</h2>
-    </div>
-    <div class="proyectos_contenedor">
-        <div class="proyectos">
-        <div class="proyecto"><h2>Titulo del Proyecto</h2></div>
-        <div class="proyecto"><h2>Titulo del Proyecto</h2></div>
-        <div class="proyecto"><h2>Titulo del Proyecto</h2></div>
+        <!-- <button class="navbar__burger">
+          <i class="fas fa-bars"></i>
+        </button> -->
+      </nav>
+
+      <section class="hero">
+        <div class="hero__title">
+          <h1>Desarrollador, Front-end y Back-end</h1>
         </div>
-    </div>
-    <div class="contacto_titulo">
-        <h2>Contactame - Email</h2>
-    </div>
-<footer class="footer">
-<h2>FG</h2>
-<p>El límite es tu imaginación...</p>
-</footer>
-</body>
+        <img class="hero__avatar" src="src/assets/img/mi-avatar.svg" />
+        <div class="hero__about">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat,
+            architecto molestias eaque aperiam quos facere? Dolorem voluptatem
+            sunt eius illo maxime, architecto repudiandae modi voluptatibus
+            laboriosam veritatis! Tenetur, maxime sunt?
+          </p>
+        </div>
+        <img class="hero__banner" src="src/assets/img/pc_vector.svg" />
+      </section>
+
+      <section class="skills">
+        <div class="skills__title">
+          <h2>Habilidades - Tecnologías</h2>
+        </div>
+        <div class="skills__container">
+          <div class="skills__list">
+            <i class="fab fa-html5" aria-hidden="true"></i>
+            <i class="fab fa-css3-alt" aria-hidden="true"></i>
+            <i class="fab fa-js-square" aria-hidden="true"></i>
+            <i class="fab fa-react" aria-hidden="true"></i>
+            <i class="fab fa-github" aria-hidden="true"></i>
+            <i class="fab fa-node-js" aria-hidden="true"></i>
+          </div>
+        </div>
+      </section>
+      <section class="projects">
+        <div class="projects__title">
+          <h2>Proyectos - Trabajos</h2>
+        </div>
+        <div class="projects__list">
+          <div class="project">
+            <h2>Titulo del Proyecto</h2>
+          </div>
+          <div class="project">
+            <h2>Titulo del Proyecto</h2>
+          </div>
+          <div class="project">
+            <h2>Titulo del Proyecto</h2>
+          </div>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="contact__title">
+          <h2>Contactame - Email</h2>
+        </div>
+      </section>
+      <footer class="footer">
+        <h2 class="footer__title">FG</h2>
+        <p class="footer__slogan">El límite es tu imaginación...</p>
+      </footer>
+    </main>
+    <script src="src/js/app.js"></script>
+  </body>
 </html>
-
-<script type="text/javascript">
-    function AlterarMenu() {
-        var element = document.getElementById("opciones");
-        var element2 = document.getElementsByClassName("navbar");
-  for (var i = 0; i < element2.length; i++) {
- element2[i].classList.toggle("show_navbar")
-}
-  element.classList.toggle("show");
-        console.log("FUNCIONA :D")
-      }
-</script>
-
-<script type="text/javascript">
-const toggleNav = document.getElementById("toggleNav");
-const navMenu = document.getElementsById("opciones");
-toggleNav.addEventListener("click",() => {} );
-</script>

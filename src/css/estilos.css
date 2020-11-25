@@ -23,108 +23,102 @@ body {
   width: 100%;
 }
 
-.navbar > .logo {
-  margin-left: 20px;
+.navbar__logo {
+  display: flex;
   font-size: 1.8rem;
-  justify-content: flex-start;
   height: fit-content;
   width: fit-content;
 }
 
-.navbar > .menu {
+.navbar__menu {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
+  list-style: none;
+  height: fit-content;
   width: fit-content;
 }
 
-.navbar > .menu > #opciones {
-  display: flex;
-}
-.navbar > .menu > #opciones ul {
-  display: inline-flex;
-}
-.navbar > .menu > #toggleNav {
-  display: none;
-}
-.navbar > .menu > #opciones li {
-  padding: 18px;
-  margin-right: 10px;
-  background: #f6f6f6;
-  list-style: none;
-  border-radius: 15px;
+.navbar__menu li {
   text-align: center;
+  font-weight: 700;
+  margin-right: 10px;
+  padding: 18px;
+  border-radius: 15px;
+  background: #f6f6f6;
 }
-.navbar a {
-  color: black;
+.navbar__menu a {
+  color: #000;
   text-decoration: none;
   height: 100%;
   width: 100%;
 }
-.titulo_contenedor {
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.hero__title {
   margin-top: 20px;
   display: flex;
   justify-content: center;
 }
-.titulo_contenedor > h1 {
+.hero__title h1 {
   font-family: "Eurostile";
   text-align: center;
   font-size: 3rem;
   font-weight: 800;
 }
-
-.acerca_de_mi {
+.hero__about {
   width: 50%;
   margin: 0 auto;
 }
-.acerca_de_mi > p {
+.hero__about p {
   margin-top: 2rem;
   font-size: 1.2rem;
   color: #0a0a0ae6;
 }
-.pc_vector_svg {
+.hero__banner {
   height: auto;
   width: 30%;
   margin: 2rem auto 0 auto;
 }
-.habilidades_titulo {
+.skills__title {
   display: flex;
   width: 100%;
   height: 5rem;
   background-color: #7510f7;
   justify-content: center;
 }
-.habilidades_titulo > h2 {
+.skills__title h2 {
   font-family: "Eurostile";
   text-align: center;
   font-size: 2rem;
   font-weight: 800;
   color: #fff;
 }
-.habilidades_contenedor {
+.skills__container {
   display: flex;
   justify-content: center;
   margin-top: 1.5rem;
   width: 100%;
   margin-bottom: 1.5rem;
 }
-.habilidades {
+.skills__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   row-gap: 1.5rem;
   width: 60%;
   margin-bottom: 1.5rem;
 }
-.habilidades > i {
+.skills__list i {
   font-size: 100px;
   height: fit-content;
   width: fit-content;
   text-align: center;
   margin: 0 auto;
+  transition: transform 0.3s ease;
 }
-.habilidades > i:hover {
+.skills__list i:hover {
   transform: scale(1.5);
 }
 .fa-html5 {
@@ -139,16 +133,17 @@ body {
 .fa-react {
   color: #61dafb;
 }
-.fa-react {
-  transform: rotate(90deg);
-}
-.fa-react:hover {
-  transition: transform 0.5s ease;
-}
 .fa-node-js {
   color: #91c441;
 }
-.proyectos_titulo {
+.projects {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.projects__title {
   display: flex;
   width: 100%;
   height: 5rem;
@@ -156,45 +151,41 @@ body {
   justify-content: center;
   margin-bottom: 1rem;
 }
-.proyectos_titulo > h2 {
+.projects__title h2 {
   font-family: "Eurostile";
   text-align: center;
   font-size: 2rem;
   font-weight: 800;
   color: #fff;
 }
-
-.proyectos_contenedor {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-.proyectos {
+.projects__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 60%;
   column-gap: 2rem;
-  row-gap: 1rem;
+  row-gap: 2rem;
+  margin: 0 auto;
+  width: 60%;
 }
-.proyecto {
+
+.project {
   height: 200px;
   width: 100%;
   background: #7510f7;
   border-radius: 15px;
   text-align: center;
+  transition: transform 0.3s ease;
 }
-.proyecto:hover {
-  transform: scale3d(1.1, 1.1, 1);
+.project:hover {
+  transform: scale(1.05);
 }
-.proyecto > h2 {
+.project h2 {
   font-family: "Eurostile";
   text-align: center;
   font-size: 1.5rem;
   font-weight: 800;
   color: #fff;
 }
-.contacto_titulo {
+.contact__title {
   display: flex;
   width: 100%;
   height: 5rem;
@@ -202,7 +193,7 @@ body {
   justify-content: center;
   margin-bottom: 1rem;
 }
-.contacto_titulo > h2 {
+.contact__title h2 {
   font-family: "Eurostile";
   text-align: center;
   font-size: 2rem;
@@ -210,7 +201,7 @@ body {
   color: #fff;
 }
 .footer {
-  padding: 6rem 0;
+  padding: 5rem 0;
   width: 100%;
   background: #7510f7;
 }
@@ -233,92 +224,23 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-  .navbar {
-    display: flex;
-    flex-direction: row;
-  }
-  .navbar > .menu > #toggleNav {
-    display: inline-flex;
-  }
-  .navbar > .menu > .fa-times {
-    font-size: 2.2rem;
-    color: #fff;
-    z-index: 4;
-    position: fixed;
-    top: 0;
-    right: 0;
-  }
-  .navbar > .menu > #opciones.active {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    background: #7510f7;
-    margin: 0;
-    padding: 0;
-    z-index: 3;
-  }
-
-  .navbar > .menu > #opciones.active li {
-    height: auto;
-    width: 10rem;
-    margin: 0.5rem;
-  }
-
-  /* .navbar > .opciones_contenedor > #opciones {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-  }
-  .navbar > .opciones_contenedor {
-    width: 100%;
-    height: calc(100vh - 5rem);
-    display: flex;
-    flex-direction: column;
-  }
-  .navbar > .opciones_contenedor > #opciones > li {
-    width: 60%;
-    padding: 18px;
-    margin: 10px auto;
-    background: #f6f6f6;
-    list-style: none;
-    border-radius: 15px;
-    height: fit-content;
-    text-align: center;
-  }
-  .navbar a {
-    color: black;
-    text-decoration: none;
-    height: fit-content;
-  } */
-  .fa-bars {
-    display: flex;
-    font-size: 1.5rem;
-    margin-right: 1rem;
-  }
-  .acerca_de_mi {
+  .hero__about {
     width: 90%;
     margin: 0 auto;
   }
-  .proyectos {
+  .projects__list {
     grid-template-columns: 1fr;
-    width: 60%;
     column-gap: 2rem;
     row-gap: 1rem;
   }
-  .habilidades {
+  .skills__list {
     grid-template-columns: 1fr 1fr;
   }
   .pc_vector_svg {
     height: auto;
     width: 80%;
+  }
+  .footer {
+    padding: 2rem 0;
   }
 }
