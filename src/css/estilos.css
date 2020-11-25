@@ -256,7 +256,7 @@ body {
   }
   .hero__banner {
     height: auto;
-    width: 30%;
+    width: 80%;
     margin: 1rem auto 0 auto;
   }
   .hero__about {
@@ -267,10 +267,11 @@ body {
     grid-template-columns: 1fr;
     column-gap: 2rem;
     row-gap: 1rem;
-    width: 90%;
+    width: 80%;
   }
   .skills__list {
     grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
   }
   .pc_vector_svg {
     height: auto;
