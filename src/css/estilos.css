@@ -17,6 +17,10 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+html,
+body.active {
+  overflow-y: hidden;
+}
 .navbar__burger {
   display: none;
 }
@@ -265,24 +269,27 @@ body {
 
 @media only screen and (max-width: 600px) {
   .navbar {
-    position: sticky;
+    position: fixed;
     background: white;
+    z-index: 3;
   }
   .navbar__menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     width: 100%;
     position: fixed;
     background: #5707be;
     margin: 0;
     padding: 0;
     top: 4rem;
-    height: calc(100vh - 4rem);
+    height: 100vh;
     transform: translateX(100%);
     transition: transform 0.4s ease-in;
+  }
+  .navbar.active {
+    top: 0;
   }
   .navbar__menu.active {
     transform: translateX(0);
@@ -296,6 +303,9 @@ body {
   }
   .navbar__menu a {
     color: #ffffff;
+  }
+  .hero {
+    margin-top: 4rem;
   }
   .hero__container {
     display: flex;
