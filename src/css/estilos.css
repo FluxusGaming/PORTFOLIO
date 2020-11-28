@@ -7,12 +7,15 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: "Permanent Marker", cursive;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   background: #fff;
   height: 100%;
   max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 .navbar__burger {
   display: none;
@@ -23,12 +26,30 @@ body {
   width: 100%;
   height: 4rem;
 }
+.navbar a {
+  text-decoration: none;
+}
 
 .navbar__logo {
   display: flex;
+  font-weight: bold;
   font-size: 1.8rem;
-  margin: 1rem;
-  height: fit-content;
+  line-height: 30px;
+  color: #1c1624;
+  height: 100%;
+  width: auto;
+  margin: 0;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.navbar__logo h2 {
+  display: flex;
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 30px;
+  color: #1c1624;
+  height: 100%;
   width: fit-content;
 }
 
@@ -40,16 +61,13 @@ body {
 }
 
 .navbar__menu li {
-  text-align: center;
-  font-weight: 700;
-  margin-right: 10px;
-  padding: 18px;
-  border-radius: 15px;
-  background: #f6f6f6;
+  margin: 10px;
 }
 .navbar__menu a {
-  color: #000;
+  text-align: center;
+  font-weight: 500;
   text-decoration: none;
+  color: #4b4850;
   height: 100%;
   width: 100%;
 }
@@ -57,32 +75,53 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-height: calc(100vh - 9rem);
   width: 100%;
+  margin-top: 0;
+}
+.hero__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .hero__title {
-  margin-top: 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: left;
+  margin-top: 3rem;
 }
 .hero__title h1 {
-  font-family: "Eurostile";
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 800;
+  font-family: "Permanent Marker";
+  font-size: 2.2rem;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+.hero__avatar {
+  height: fit-content;
+  width: fit-content;
 }
 .hero__about {
-  width: 50%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  width: 30%;
+  margin-left: 5rem;
 }
 .hero__about p {
-  margin-top: 2rem;
+  color: #5c5c5c;
+  font-weight: normal;
   font-size: 1.2rem;
-  color: #0a0a0ae6;
+  height: fit-content;
+  text-align: left;
 }
 .hero__banner {
+  display: flex;
   height: auto;
-  width: 30%;
-  margin: 2rem auto 0 auto;
+  width: 30rem;
+  margin: 0 auto 0 auto;
 }
 .skills__title {
   display: flex;
@@ -220,15 +259,51 @@ body {
   text-align: center;
   font-weight: 300;
   font-size: 1.6rem;
-  opacity: 0.8;
   color: #fff;
   line-height: 0;
 }
 
 @media only screen and (max-width: 600px) {
-  .navbar__menu {
-    display: none;
+  .navbar {
+    position: sticky;
+    background: white;
   }
+  .navbar__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    background: #7510f7;
+    margin: 0;
+    padding: 0;
+    top: 4rem;
+    height: calc(100vh - 4rem);
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in;
+  }
+  .navbar__menu.active {
+    transform: translateX(0);
+  }
+  .navbar__menu li {
+    padding: 2rem;
+    border: 1px solid white;
+    border-radius: 15px;
+    width: 30%;
+    text-align: center;
+  }
+  .navbar__menu a {
+    color: #ffffff;
+  }
+  .hero__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .navbar__burger {
     display: flex;
     align-items: center;
@@ -250,19 +325,28 @@ body {
     font-size: 1.5rem;
   }
   .hero__title {
-    margin: 0;
     display: flex;
     justify-content: center;
+    margin: 0;
+  }
+  .hero__title h1 {
+    text-align: center;
   }
   .hero__banner {
     height: auto;
     width: 80%;
-    margin: 1rem auto 0 auto;
+  }
+  .hero__avatar {
+    width: 45%;
   }
   .hero__about {
     width: 90%;
     margin: 0 auto;
   }
+  .hero__about p {
+    text-align: center;
+  }
+
   .projects__list {
     grid-template-columns: 1fr;
     column-gap: 2rem;
