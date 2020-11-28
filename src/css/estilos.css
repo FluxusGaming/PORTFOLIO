@@ -1,13 +1,13 @@
-@font-face {
+/* @font-face {
   font-family: "Eurostile";
   src: url("https://fluxusgaming.github.io/PORTFOLIO_PROYECTO_DEMO/src/fonts/Eurostile.ttf");
-}
+} */
 
 html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Permanent Marker", cursive;
+  font-family: "Permanent Marker", cursive, "Roboto", sans-serif;
   font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;

@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Portfolio</title>
+    <meta name="description" content="Mi Portfolio" />
     <link rel="stylesheet" href="src/css/estilos.css" />
-    <link rel="prefetch" href="src/js/app.js" />
+    <link defer href="src/js/app.js" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
+      rel="preload"
+      as="style"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
       rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@500&display=swap"
+      rel="preload"
+      as="style"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@500&display=swap"
@@ -19,6 +30,11 @@
     <script
       src="https://kit.fontawesome.com/1bfd5e88d3.js"
       crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/1bfd5e88d3.js"
+      crossorigin="anonymous"
+      defer
     ></script>
   </head>
   <body>
@@ -42,14 +58,18 @@
             <a href="#contact">Contacto</a>
           </li>
         </ul>
-        <button class="navbar__burger">
+        <button class="navbar__burger" aria-label="hamburger__icon">
           <i class="fas fa-bars"></i>
         </button>
       </nav>
 
       <section class="hero" id="hero">
         <div class="hero__container">
-          <img class="hero__avatar" src="src/assets/img/mi_avatar.svg" />
+          <img
+            class="hero__avatar"
+            src="src/assets/img/mi_avatar.svg"
+            alt="hero__avatar"
+          />
           <div class="hero__about">
             <div class="hero__title">
               <h1>Hola, soy Agustín</h1>
@@ -60,7 +80,11 @@
             </p>
           </div>
         </div>
-        <img class="hero__banner" src="src/assets/img/pc_vector.svg" />
+        <img
+          class="hero__banner"
+          src="src/assets/img/pc_vector.svg"
+          alt="hero__banner"
+        />
       </section>
 
       <section class="skills" id="skills">
