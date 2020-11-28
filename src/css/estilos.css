@@ -273,7 +273,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .navbar {
-    position: fixed;
+    position: sticky;
     background: white;
     z-index: 3;
   }
