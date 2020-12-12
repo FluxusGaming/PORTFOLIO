@@ -144,6 +144,7 @@ body {
   width: 100%;
   margin-bottom: 1.5rem;
 }
+
 .skills__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -158,6 +159,13 @@ body {
   text-align: center;
   margin: 0 auto;
   transition: transform 0.3s ease;
+}
+.skills__list a {
+  text-decoration: none;
+  color: #000000;
+  height: fit-content;
+  width: fit-content;
+  place-self: center;
 }
 .skills__list i:hover {
   transform: scale(1.5);
@@ -174,6 +182,7 @@ body {
 .fa-react {
   color: #61dafb;
 }
+
 .fa-node-js {
   color: #91c441;
 }
@@ -215,6 +224,7 @@ body {
   border-radius: 15px;
   text-align: center;
   transition: transform 0.3s ease;
+  overflow: hidden;
 }
 .project:hover {
   transform: scale(1.05);
@@ -225,6 +235,27 @@ body {
   font-size: 1.5rem;
   font-weight: 800;
   color: #fff;
+  margin: 0;
+  padding: 1rem;
+}
+.projects__list a {
+  height: 200px;
+  width: 100%;
+  text-decoration: none;
+}
+.fa-briefcase {
+  color: #ffffff;
+  font-size: 5rem;
+}
+.fa-sitemap {
+  color: #ffffff;
+  font-size: 5rem;
+}
+.fa-book-reader {
+  color: #ffffff;
+  font-size: 5rem;
+}
+.contact__img__container {
 }
 .contact {
   display: flex;
