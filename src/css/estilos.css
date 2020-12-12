@@ -256,6 +256,10 @@ body {
   font-size: 5rem;
 }
 .contact__img__container {
+  transition: transform 0.3s ease;
+}
+.contact__img__container:hover {
+  transform: scale(1.1);
 }
 .contact {
   display: flex;
